@@ -16,9 +16,9 @@
                  [spootnik/unilog "0.7.15"]]
 
   ;; package is used by the Dockerfile for the build
-  :aliases {"package" ["do"]
-                      ["test"]
-                      ["uberjar"]}
+  :aliases {"package" ["do"
+                       ["test"]
+                       ["uberjar"]]}
 
   :plugins [[lein-figwheel "0.5.8"]
             [lein-cljsbuild "1.1.4" :exclusions [[org.clojure/clojure]]]
