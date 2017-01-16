@@ -109,4 +109,5 @@
                                   :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}
              :uberjar {:prep-tasks ["compile" ["cljsbuild" "once" "min"]]
                        :aot :all
+                       :jvm-opts ["-Dclojure.compiler.direct-linking=true"]
                        :main game-of-life.webserver}})
