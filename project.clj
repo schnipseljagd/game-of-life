@@ -9,6 +9,7 @@
                  [org.clojure/clojurescript "1.9.229"]
                  [org.clojure/core.async "0.2.391" :exclusions [org.clojure/tools.reader]]
                  [cljs-http "0.1.42"]
+                 [compojure "1.6.0-beta3" :exclusions [ring/ring-core]]
                  [ring/ring-core "1.5.0"]
                  [ring/ring-jetty-adapter "1.5.0"]
                  [environ "1.1.0"]
