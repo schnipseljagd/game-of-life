@@ -36,6 +36,11 @@
   []
   (f/cljs-repl))
 
+
+(defn stop
+  []
+  (webserver/server-stop))
+
 (defn go
   []
   (webserver/server-start)
@@ -43,5 +48,5 @@
 
 (defn reset
   []
-  (webserver/server-stop)
+  (stop)
   (refresh :after 'user/go))
