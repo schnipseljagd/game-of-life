@@ -1,8 +1,7 @@
 (defproject game-of-life "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url  "http://www.eclipse.org/legal/epl-v10.html"}
+  :description "Just another game of life implementation"
+  :license {:name "MIT License"
+            :url  "https://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/math.numeric-tower "0.0.4"]
                  [pandect "0.6.1"]
@@ -12,15 +11,21 @@
                  [cljs-http "0.1.42"]
                  [ring/ring-core "1.5.0"]
                  [ring/ring-jetty-adapter "1.5.0"]
-                 [environ "1.1.0"]]
+                 [environ "1.1.0"]
+                 [spootnik/unilog "0.7.15"]]
+
+  ;; package is used by the Dockerfile for the build
+  :aliases {"package" ["do"]
+                      ["test"]
+                      ["uberjar"]}
 
   :plugins [[lein-figwheel "0.5.8"]
             [lein-cljsbuild "1.1.4" :exclusions [[org.clojure/clojure]]]
             [lein-environ "1.1.0"]]
 
-  :uberjar-name "game-of-life.jar"
-
   :source-paths ["src"]
+
+  :target-path "target/%s/" ; don't get AOT in your REPL
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
 

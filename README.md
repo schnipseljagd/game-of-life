@@ -1,19 +1,22 @@
-# game-of-life
+# Game of life
 
+Just another game of life implementation used as walking skeleton to test [skyliner.io](https://www.skyliner.io/).
 
+## Prerequisites
 
-## Dependencies
-    * Java (tested with 1.8)
-    * Leiningen
+You will need [Leiningen][] 2.0.0 or above installed.
+
+[leiningen]: https://github.com/technomancy/leiningen
 
 ## Usage
 
-    ; serves a period-51 oscillator
-    lein uberjar
-    java -jar target/game-of-life.jar
-
     lein test
 
+    ; serves a period-51 oscillator
+    lein uberjar
+    java -jar target/uberjar/game-of-life-0.1.0-SNAPSHOT-standalone.jar
+
+    ; starts a repl
     lein repl
 
 ## License

@@ -5,7 +5,8 @@
     [clojure.repl :refer (apropos dir doc find-doc pst source)]
     [clojure.test :as test]
     [clojure.tools.namespace.repl :refer (refresh refresh-all)]
-    [figwheel-sidecar.repl-api :as f]))
+    [figwheel-sidecar.repl-api :as f]
+    [game-of-life.webserver :as webserver]))
 
 (defmacro dbg [& body]
   (let [result (gensym 'result)]
@@ -34,3 +35,13 @@
   "Launch a ClojureScript REPL that is connected to your build and host environment."
   []
   (f/cljs-repl))
+
+(defn go
+  []
+  (webserver/server-start)
+  :ready)
+
+(defn reset
+  []
+  (webserver/server-stop)
+  (refresh :after 'user/go))
