@@ -1,14 +1,17 @@
 # game-of-life
 
-A Clojure library designed to ... well, that part is up to you.
+
+
+## Dependencies
+    * Java (tested with 1.8)
+    * Leiningen
 
 ## Usage
 
-FIXME
+    ; serves a period-51 oscillator
+    lein uberjar
+    java -jar target/game-of-life.jar
 
-## License
+    lein test
 
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+    lein repl
