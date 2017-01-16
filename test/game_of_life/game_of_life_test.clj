@@ -1,6 +1,6 @@
-(ns game-of-life.game-of-life.game-of-life-test
+(ns game-of-life.game-of-life-test
   (:require [clojure.test :refer :all]
-            [game-of-life.game-of-life.game-of-life :refer :all]))
+            [game-of-life.game-of-life :refer :all]))
 
 (def a-world (init-world 3 [[0 1]]))
 

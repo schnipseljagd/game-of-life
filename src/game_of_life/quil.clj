@@ -1,5 +1,5 @@
-(ns game-of-life.game-of-life.quil
-  (:require [game-of-life.game-of-life.game-of-life :refer [step init-world]]
+(ns game-of-life.quil
+  (:require [game-of-life.game-of-life :refer [step init-world]]
             [quil.core :as q]
             [quil.middleware :as m]))
 

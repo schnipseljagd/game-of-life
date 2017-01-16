@@ -1,4 +1,4 @@
-(ns game-of-life.game-of-life.game-of-life)
+(ns game-of-life.game-of-life)
 
 
 ;; queries the worlds state
@@ -51,5 +51,5 @@
    :living living})
 
 (comment
-  (take 5 (iterate game-of-life.game-of-life.game-of-life/step
+  (take 5 (iterate game-of-life.game-of-life/step
                    (init-world 100 [[0 0] [1 0] [2 0]]))))

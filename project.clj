@@ -31,14 +31,14 @@
                 ;; the presence of a :figwheel configuration here
                 ;; will cause figwheel to inject the figwheel client
                 ;; into your build
-                :figwheel     {:on-jsload "game-of-life.game-of-life.quil/on-js-reload"
+                :figwheel     {:on-jsload "game-of-life.quil/on-js-reload"
                                ;; :open-urls will pop open your application
                                ;; in the default browser once Figwheel has
                                ;; started and complied your application.
                                ;; Comment this out once it no longer serves you.
                                :open-urls ["http://localhost:3449/index.html"]}
 
-                :compiler     {:main                 game-of-life.game-of-life.quil
+                :compiler     {:main                 game-of-life.quil
                                :asset-path           "js/compiled/out"
                                :output-to            "resources/public/js/compiled/game_of_life.js"
                                :output-dir           "resources/public/js/compiled/out"
@@ -52,7 +52,7 @@
                {:id           "min"
                 :source-paths ["src"]
                 :compiler     {:output-to     "resources/public/js/compiled/game_of_life.js"
-                               :main          game-of-life.game-of-life.quil
+                               :main          game-of-life.quil
                                :optimizations :advanced
                                :pretty-print  false}}]}
 
@@ -109,4 +109,4 @@
                                   :nrepl-middleware [cemerick.piggieback/wrap-cljs-repl]}}
              :uberjar {:prep-tasks ["compile" ["cljsbuild" "once" "min"]]
                        :aot :all
-                       :main game-of-life.game-of-life.webserver}})
+                       :main game-of-life.webserver}})

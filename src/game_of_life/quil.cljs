@@ -1,6 +1,6 @@
-(ns game-of-life.game-of-life.quil
+(ns game-of-life.quil
   (:require-macros [cljs.core.async.macros :refer [go]])
-  (:require [game-of-life.game-of-life.game-of-life :refer [step init-world]]
+  (:require [game-of-life.game-of-life :refer [step init-world]]
             [quil.core :as q]
             [quil.middleware :as m]
             [cljs-http.client :as http]

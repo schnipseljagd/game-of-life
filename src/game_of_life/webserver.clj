@@ -1,4 +1,4 @@
-(ns game-of-life.game-of-life.webserver
+(ns game-of-life.webserver
   (:gen-class)
   (:require [ring.util.response :refer [file-response content-type not-found]]
             [ring.adapter.jetty :refer [run-jetty]]
